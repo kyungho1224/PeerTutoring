@@ -1,3 +1,6 @@
+import entity.JuniorProgrammer;
+import entity.SeniorProgrammer;
+
 /**
  * Created by KimKyungHo on 2024-02-07(007)
  */
@@ -36,6 +39,27 @@ public class Main {
      */
 
     public static void main(String[] args) {
+        JuniorProgrammer juniorProgrammer = new JuniorProgrammer();
+        juniorProgrammer.display();
+
+        String grade="시니어";
+        SeniorProgrammer seniorProgrammer = new SeniorProgrammer(grade);
+        seniorProgrammer.display(grade);
+
+        System.out.println();
+
+        juniorProgrammer.doJava();
+        seniorProgrammer.doJava();
+        juniorProgrammer.doKotlin();
+        seniorProgrammer.doKotlin();
+        juniorProgrammer.doPython();
+        seniorProgrammer.doPython();
+        juniorProgrammer.doAndroid();
+        seniorProgrammer.doAndroid();
+
+        System.out.println();
+
+        juniorProgrammer.leave();
 
 
     }
