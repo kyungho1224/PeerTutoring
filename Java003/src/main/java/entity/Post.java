@@ -17,6 +17,60 @@ public class Post {
     private Integer id;
     private String title;
     private String message;
+
+    //작성자 이름
     private String postedBy;
     private LocalDateTime postedAt;
+
+
+    public Post(String title, String message, String postedBy, int id) {
+        this.title = title;
+        this.message = message;
+        this.postedBy = postedBy;
+        this.id = id;
+        postedAt= LocalDateTime.now();
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String getPostedBy() {
+        return postedBy;
+    }
+
+    public void setPostedBy(String postedBy) {
+        this.postedBy = postedBy;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public LocalDateTime getPostedAt() {
+        return postedAt;
+    }
+
+    @Override
+    public String toString() {
+        return "Post{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", message='" + message + '\'' +
+                ", postedBy='" + postedBy + '\'' +
+                ", postedAt=" + postedAt +
+                '}'+'\n';
+    }
 }

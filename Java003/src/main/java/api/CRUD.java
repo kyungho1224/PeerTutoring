@@ -7,7 +7,7 @@ import java.util.List;
  */
 public interface CRUD<DTO, ENTITY> {
 
-    // create
+    // create - 게시글을 쓴 사용자 이름, 게시글을 입력하는 request를 받을 DTO
     ENTITY create(String user, DTO dto);
 
     // read
